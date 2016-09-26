@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#0000"
+    android:orientation="horizontal"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dp" >
+ 
+    <!--  PROFILE IMAGE -->
+    <com.miles.referensi.CircleImageView
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/profileImage"
+	    android:layout_width="60dp"
+	    android:layout_height="60dp"
+	    android:paddingLeft="5dp"
+	    android:paddingRight="5dp"
+	    app:civ_border_width="1dp"
+	    app:civ_border_color="#000" />
+    <!-- DATE -->
+    <TextView android:id="@+id/txtDate"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImage"
+        android:textColor="#404040"
+        android:textSize="10sp"
+        android:layout_marginTop="2dip"
+        android:text="13 days ago"
+        android:gravity="center"
+        android:visibility="gone" />
+ 
+    <!-- NAME -->
+    <TextView android:id="@+id/txtName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profileImage"
+        android:layout_toRightOf="@+id/profileImage"
+        android:text="Rihanna"
+        android:textColor="#1f4d6f"
+        android:textSize="15dip"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="60dp"
+        android:singleLine="true" />
+ 	<!-- REVIEW -->
+    <TextView android:id="@+id/txtReview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:textColor="#54555c"
+        android:textSize="9sp"
+        android:layout_marginTop="2dip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_toRightOf="@+id/profileImage"
+        android:text="74 Reviews, 24 Followers"
+        android:visibility="visible" />
+    <!-- DETAIL -->
+    <TextView android:id="@+id/txtDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtReview"
+        android:textColor="#767676"
+        android:textSize="13sp"
+        android:layout_marginTop="2dip"
+        android:layout_marginBottom="4dip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_toRightOf="@+id/profileImage"
+        android:text="Lorem ipsum dolor sit amet, etur adipiscing elit. Pentesque in sodales mi. Nulla auque ortor, ultricies luctus diam egetaliquam condimentum nunc." />
+ 
+     <!-- BUTTON -->
+     <Button android:id="@+id/btnFollow"
+         android:layout_width="30dp"
+         android:layout_height="30dp"
+         android:src="@drawable/circle_follow"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="0dp" />
+ 
+</RelativeLayout>

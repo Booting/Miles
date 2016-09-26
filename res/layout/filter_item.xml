@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+	<LinearLayout android:id="@+id/linFilter"
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="#30ad9c"
+	    android:visibility="gone">
+	    <ImageView android:id="@+id/imgFilter" 
+	        android:layout_width="match_parent"
+	        android:layout_height="140dp"
+	        android:background="@drawable/filter_bg" />
+	    <TextView android:id="@+id/txtPrinceRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+	        android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:layout_marginTop="-10dp"
+            android:text="PRINCE RANGE" />
+	    <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+	        <TextView android:id="@+id/txtFrom"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+		        android:textColor="#FFF"
+	            android:textSize="13sp"
+	            android:layout_marginRight="5dp"
+	            android:text="FROM" />
+	        <Spinner android:id="@+id/spinFrom"
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+        		android:layout_toRightOf="@+id/txtFrom"
+		        android:layout_centerVertical="true"
+	        	android:textColor="#323737"
+	        	android:textSize="13sp" />
+	        <TextView android:id="@+id/txtTo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+        		android:layout_toLeftOf="@+id/spinTo"
+	            android:layout_centerVertical="true"
+		        android:textColor="#FFF"
+	            android:textSize="13sp"
+	            android:layout_marginRight="5dp"
+	            android:text="TO" />
+	        <Spinner android:id="@+id/spinTo"
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+	        	android:textColor="#323737"
+	        	android:textSize="13sp" />
+	    </RelativeLayout>
+	    <TextView android:id="@+id/txtInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+	        android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="INTEREST" />
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/layoutTabbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingTop="10dip"
+        android:paddingBottom="15dip"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+	    android:background="#30ad9c">
+        <Button android:id="@+id/btnDayLife"
+            android:text="Day Life"
+            style="@style/btnStyleTabLeft" />
+        <Button android:id="@+id/btnNightLife"
+            android:text="Night Life"
+            android:layout_marginLeft="-1dp"
+            style="@style/btnStyleTabMiddle" />
+        <Button android:id="@+id/btnEvent"
+            android:text="Event"
+            android:layout_marginLeft="-1dp"
+            style="@style/btnStyleTabRight" />
+    </LinearLayout>
+
+	<RelativeLayout android:id="@+id/relList"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	    <RelativeLayout android:layout_width="match_parent"
+		    android:layout_height="250dp"
+		    android:id="@+id/relImage">
+		    <com.miles.referensi.LoopViewPager
+		        android:id="@+id/pagerItemImages"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		    <com.viewpagerindicator.CirclePageIndicator
+		        android:id="@+id/indicator"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/pagerItemImages"
+		        android:paddingBottom="10dip"
+		        app:radius="5dip"
+		        app:fillColor="#000"
+		        app:pageColor="#aaa"
+		        app:strokeColor="#00FFFFFF"
+		        app:strokeWidth="0dp" />
+		</RelativeLayout>   
+		<com.miles.referensi.HorizontalListView 
+		    android:id="@+id/HorizontalListView"
+		    android:layout_width="fill_parent"
+		    android:layout_height="150dp"
+		    android:divider="#0000"
+		    android:layout_below="@+id/relImage" />
+	</RelativeLayout>
+</LinearLayout>

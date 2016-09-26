@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#0000"
+    android:orientation="horizontal"
+    android:padding="5dip"
+    android:id="@+id/relParent" >
+ 
+    <!--  PROFILE IMAGE -->
+    <com.miles.referensi.CircleImageView
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/profileImage"
+	    android:layout_width="60dp"
+	    android:layout_height="60dp"
+	    android:src="@drawable/profile_icon"
+	    app:civ_border_width="1dp"
+	    app:civ_border_color="#000"
+        android:layout_marginLeft="10dp" />
+ 
+    <!-- NAME -->
+    <TextView android:id="@+id/txtName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profileImage"
+        android:layout_toRightOf="@+id/profileImage"
+        android:text="Rihanna"
+        android:textColor="#1f4d6f"
+        android:textSize="15dip"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="60dp"
+        android:singleLine="true" />
+ 
+    <!-- DETAIL -->
+    <TextView android:id="@+id/txtDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:textColor="#676b6d"
+        android:textSize="12sp"
+        android:layout_marginTop="2dip"
+        android:layout_marginBottom="4dip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="60dp"
+        android:lines="1"
+        android:layout_toRightOf="@+id/profileImage"
+        android:text="Just gona stand there and aknkankfnaknfanfjanjfnajf" />
+ 
+     <!-- BUTTON -->
+     <LinearLayout android:id="@+id/linFollow"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="10dp"
+         android:paddingRight="10dp"
+         android:paddingTop="7dp"
+         android:paddingBottom="7dp"
+         android:background="@drawable/custom_button_follow"
+         android:orientation="horizontal"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:layout_marginRight="10dp" >
+         <ImageView android:id="@+id/iconFollow"
+             android:layout_width="15dp"
+             android:layout_height="15dp"
+             android:src="@drawable/follow_icon"
+	         android:layout_centerVertical="true" />
+	     <TextView android:id="@+id/txtStatus"
+	         android:layout_width="wrap_content"
+	         android:layout_height="fill_parent"
+	         android:text="Follow"
+	         android:layout_centerVertical="true"
+	         android:textColor="@drawable/custom_button_follow_textview"
+	         android:textSize="14sp"
+        	android:layout_marginLeft="3dp" />
+     </LinearLayout>
+ 
+</RelativeLayout>

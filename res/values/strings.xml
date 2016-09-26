@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Miles</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="APP_ID">1533930820239925</string>
+	<!-- FACEBOOK APP ID
+         Key Hashes [DEV]  : NX406c6W/gTBPzb0eue8MWm9WHo=
+         Key Hashes [LIVE] : ga0RGNYHvNM5d0SLGQfpQWAPGJ8=
+    -->
+	<string name="facebook_app_id">436462486546326</string>
+	<string name="spinner_title">Select your region</string>
+
+</resources>

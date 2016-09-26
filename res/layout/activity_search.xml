@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <!-- ACTION BAR -->
+    <RelativeLayout android:id="@+id/relActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+        <include layout="@layout/custom_actionbar_three" />
+    </RelativeLayout>
+       
+    <!-- LISTVIEW -->
+    <ListView android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+	  	android:id="@+id/lsvList"
+	  	android:cacheColorHint="#00000000"
+	    android:smoothScrollbar="true"
+	    android:scrollingCache="false"
+	    android:animationCache="false"
+	  	android:layout_below="@+id/relActionBar"
+	  	android:layout_above="@+id/relBottomBar" >
+   	</ListView>
+   	<com.miles.gridview.StaggeredGridView 
+		android:id="@+id/lsvListVenue"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:smoothScrollbar="true"
+		android:scrollingCache="false"
+		android:animationCache="false"
+    	android:background="#e5e5e5"
+		app:column_count="2"
+		app:item_margin="10dp"
+	  	android:layout_below="@+id/relActionBar"
+	  	android:layout_above="@+id/relBottomBar" />
+   	
+    <!-- BOTTOM BAR -->
+    <RelativeLayout android:id="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <include layout="@layout/custom_bottombar" />
+    </RelativeLayout>
+    
+    <ProgressBar android:id="@+id/progressBusy"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+	  	android:layout_below="@+id/relActionBar"
+	  	android:layout_marginTop="40dp"
+	  	android:gravity="center"
+	  	android:layout_gravity="center"
+	  	android:visibility="gone" >
+    </ProgressBar>
+   	
+</RelativeLayout>

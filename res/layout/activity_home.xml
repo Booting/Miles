@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <!-- ACTION BAR -->
+    <RelativeLayout android:id="@+id/relActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+        <include layout="@layout/custom_actionbar" />
+    </RelativeLayout>
+       
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	  	android:layout_below="@+id/relActionBar"
+	  	android:layout_above="@+id/relBottomBar"
+	  	android:visibility="invisible">
+    	<!-- LISTVIEW -->
+	    <ListView android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+		  	android:id="@+id/lsvList"
+		  	android:cacheColorHint="#00000000"
+		    android:smoothScrollbar="true"
+		    android:scrollingCache="false"
+		    android:animationCache="false" >
+	   	</ListView>
+   	</com.yalantis.phoenix.PullToRefreshView>
+   	
+    <com.yalantis.phoenix.PullToRefreshNightView
+        android:id="@+id/pull_to_refresh_night"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	  	android:layout_below="@+id/relActionBar"
+	  	android:layout_above="@+id/relBottomBar"
+	  	android:visibility="invisible">
+    	<!-- LISTVIEW -->
+	    <ListView android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+		  	android:id="@+id/lsvListNight"
+		  	android:cacheColorHint="#00000000"
+		    android:smoothScrollbar="true"
+		    android:scrollingCache="false"
+		    android:animationCache="false" >
+	   	</ListView>
+   	</com.yalantis.phoenix.PullToRefreshNightView>
+   	
+    <com.yalantis.phoenix.PullToRefreshEventView
+        android:id="@+id/pull_to_refresh_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	  	android:layout_below="@+id/relActionBar"
+	  	android:layout_above="@+id/relBottomBar"
+	  	android:visibility="invisible">
+    	<!-- LISTVIEW -->
+	    <ListView android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+		  	android:id="@+id/lsvListEvent"
+		  	android:cacheColorHint="#00000000"
+		    android:smoothScrollbar="true"
+		    android:scrollingCache="false"
+		    android:animationCache="false" >
+	   	</ListView>
+   	</com.yalantis.phoenix.PullToRefreshEventView>
+   	
+    <!-- BOTTOM BAR -->
+    <RelativeLayout android:id="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+        <include layout="@layout/custom_bottombar" />
+    </RelativeLayout>
+    
+    <ProgressBar android:id="@+id/progressBusy"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_centerInParent="true">
+    </ProgressBar>
+   	
+</RelativeLayout>

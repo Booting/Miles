@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.miles.gen"
+    android:versionCode="20"
+    android:versionName="1.2" >
+
+    <uses-sdk android:minSdkVersion="11"
+        android:targetSdkVersion="22" />
+    
+	<permission
+        android:name="com.miles.main.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="com.miles.main.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".SplashScreenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".RegionActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".FilteringActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".LeftMenuActivity" android:theme="@style/Theme.Transparent" />
+        <activity android:name=".PhotoViewer" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".HomeMapsActivity" />
+        
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/APP_ID" />
+        <!-- DEV MAPS -->
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCwcSDVPtTIU1IyYAKw_pN1IKolSvV2Imc" />
+        <!-- LIVE MAPS -->
+        <!--<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBi8ferldiJoi9yo7kPPhjsmduvVWx8gfs" />-->
+        <meta-data android:name="com.google.android.gms.version"
+	        android:value="6587000" />
+        
+        <activity android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+   			android:value="@string/facebook_app_id"/>
+    </application>
+
+</manifest>

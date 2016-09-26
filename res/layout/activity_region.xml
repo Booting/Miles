@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	    <ImageButton android:id="@+id/btnRegionJakarta"
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:background="#0000"
+	        android:src="@drawable/region_jakarta"
+	        android:scaleType="centerCrop" />
+	    <ImageButton android:id="@+id/btnRegionBandung"
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:background="#0000"
+	        android:src="@drawable/region_bandung"
+	        android:scaleType="centerCrop" />
+	    <ImageButton android:id="@+id/btnRegionBali"
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:background="#0000"
+	        android:src="@drawable/region_bali"
+	        android:scaleType="centerCrop" />
+	    <ImageButton android:id="@+id/btnRegionSurabaya"
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:background="#0000"
+	        android:src="@drawable/region_surabaya"
+	        android:scaleType="centerCrop" />
+	    <ImageButton android:id="@+id/btnRegionYogyakarta"
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:background="#0000"
+	        android:src="@drawable/region_yogyakarta"
+	        android:scaleType="centerCrop" />
+	</LinearLayout>
+</ScrollView>

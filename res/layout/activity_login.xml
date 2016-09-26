@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:background="@drawable/signin"
+	android:animateLayoutChanges="true" >
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+		android:animateLayoutChanges="true" >
+	    <ImageView android:layout_width="fill_parent"
+	        android:layout_height="200dp"
+	        android:src="@drawable/logo"
+	        android:scaleType="centerCrop"
+	        android:contentDescription="@string/app_name"
+	        android:layout_marginTop="20dip" />
+	    
+	    <!-- EMAIL -->
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:padding="10dp"
+			android:animateLayoutChanges="true" >
+	        <ImageView android:layout_width="25dip"
+		        android:layout_height="15dip"
+		        android:src="@drawable/email"
+		        android:layout_marginLeft="5dip"/>
+	        <EditText android:id="@+id/txtEmail"
+	            android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+			    android:hint="E-mail"
+			    android:textSize="14sp"
+			    android:layout_marginLeft="15dip"
+			    android:layout_gravity="center_vertical"
+			    android:background="#0000"
+			    android:singleLine="true"
+			    android:textColor="#FFF"
+			    android:textColorHint="#FFF"
+			    android:inputType="textEmailAddress" />
+	    </LinearLayout>
+	    <View android:layout_width="fill_parent"
+	        android:layout_height="0.3dp"
+	        android:background="#FFF"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+			android:animateLayoutChanges="true" />
+	    
+	    <!-- Password -->
+	    <LinearLayout android:id="@+id/linPassword"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:padding="10dp"
+			android:animateLayoutChanges="true" >
+	        <ImageView android:layout_width="25dip"
+		        android:layout_height="18dip"
+		        android:src="@drawable/lock"
+		        android:layout_marginLeft="5dip"
+		        android:gravity="center" />
+	        <EditText android:id="@+id/txtPassword"
+	            android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+			    android:hint="Password"
+			    android:textSize="14sp"
+			    android:layout_marginLeft="15dip"
+			    android:layout_gravity="center_vertical"
+			    android:background="#0000"
+			    android:singleLine="true"
+			    android:textColor="#FFF"
+			    android:textColorHint="#FFF"
+			    android:inputType="textPassword" />
+	    </LinearLayout>
+	    <View android:id="@+id/vPassword" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="0.3dp"
+	        android:background="#FFF"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+			android:animateLayoutChanges="true" />
+	    
+	    <!-- FORGOT PASSWORD -->
+	    <TextView android:id="@+id/txtForgotPassword"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+		    android:text="forgot password ?"
+		    android:textSize="11sp"
+		    android:gravity="center_horizontal"
+		    android:singleLine="true"
+		    android:textColor="#FFF"
+		    android:padding="15dip"
+			android:animateLayoutChanges="true" />
+	    
+	    <Button android:id="@+id/btnSignIn"
+	        style="@style/btnStyleSignIn"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginLeft="50dp"
+	        android:layout_marginRight="50dp"
+	        android:text="Sign in"
+			android:animateLayoutChanges="true" />
+	    
+	    <TextView android:id="@+id/txtOr"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+		    android:text="or"
+		    android:textSize="13sp"
+		    android:gravity="center_horizontal"
+		    android:singleLine="true"
+		    android:textColor="#FFF"
+	        android:layout_marginTop="20dp"
+			android:animateLayoutChanges="true" />
+	    
+	    <!-- SIGN IN FACEBOOK -->
+	    <com.facebook.widget.LoginButton android:id="@+id/btnLoginn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="45dip"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginLeft="50dp"
+	        android:layout_marginRight="50dp"
+	        facebook:fetch_user_info="true"
+	        facebook:confirm_logout="false"
+			android:animateLayoutChanges="true"
+			android:visibility="gone" />
+	    <RelativeLayout android:id="@+id/btnLogin"
+	         android:layout_width="match_parent"
+             android:layout_height="45dp"
+             android:animateLayoutChanges="true"
+             android:layout_gravity="center_horizontal|center_vertical|center"
+             android:gravity="center_horizontal|center_vertical|center"
+             android:background="@drawable/custom_btn_signin_fb"
+	         android:layout_marginTop="20dp"
+	         android:layout_marginLeft="50dp"
+	         android:layout_marginRight="50dp">
+             <ImageView android:id="@+id/imgFacebookLogo"
+                 android:layout_width="11dip"
+                 android:layout_height="18dip"
+                 android:background="@drawable/facebook_logo"
+                 android:layout_marginRight="10dip"
+                 android:layout_centerVertical="true"/>
+             <TextView android:id="@+id/lblSignWithFacebook"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Log in with Facebook"
+                 android:textColor="#FFF"
+                 android:textSize="15sp"
+                 android:textStyle="bold"
+                 android:layout_gravity="center"
+                 android:gravity="center"
+                 android:layout_centerVertical="true"
+                 android:layout_toRightOf="@+id/imgFacebookLogo"/>
+         </RelativeLayout>
+	    
+	    <!-- REGISTER -->
+	    <LinearLayout android:id="@+id/linRegister"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="40dip"
+	        android:layout_gravity="center_horizontal"
+	        android:gravity="center_horizontal"
+			android:animateLayoutChanges="true" >
+		    <TextView android:id="@+id/txtRegisterOne"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+			    android:text="No account yet? Tap here to"
+			    android:textSize="14sp"
+			    android:gravity="center_horizontal"
+			    android:singleLine="true"
+			    android:textColor="#FFF" />
+		    <TextView android:id="@+id/txtRegisterTwo"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+			    android:text="register"
+			    android:textSize="14sp"
+			    android:gravity="center_horizontal"
+			    android:singleLine="true"
+			    android:textColor="#FFF"
+			    android:layout_marginLeft="5dip" />
+	    </LinearLayout>
+	</LinearLayout>
+</ScrollView>

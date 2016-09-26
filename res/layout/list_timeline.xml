@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <!-- PROFILE -->
+    <RelativeLayout android:id="@+id/relProfile"
+        android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:visibility="visible">
+        <ImageView android:id="@+id/imgProfile"
+        	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+        <ImageView android:id="@+id/imgBgProfile"
+        	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+        	android:layout_alignParentRight="true" />
+       	<LinearLayout android:id="@+id/linCoFollowers"
+            android:layout_width="wrap_content"
+         	android:layout_height="wrap_content"
+         	android:paddingLeft="8dp"
+         	android:paddingRight="8dp"
+         	android:paddingTop="5dp"
+         	android:paddingBottom="5dp"
+         	android:background="@drawable/custom_button_follow"
+         	android:orientation="horizontal"
+         	android:layout_alignParentRight="true"
+        	android:layout_marginRight="10dp" >
+	        <TextView android:id="@+id/txtCountFollowers"
+   	         	android:layout_width="wrap_content"
+	         	android:layout_height="fill_parent"
+		        android:layout_centerVertical="true"
+		        android:textColor="@drawable/custom_button_follow_textview"
+		        android:textSize="14sp" />
+		    <TextView android:id="@+id/txtFollowers"
+   	         	android:layout_width="wrap_content"
+	         	android:layout_height="fill_parent"
+		        android:text="Followers"
+		        android:layout_centerVertical="true"
+		        android:textColor="@drawable/custom_button_follow_textview"
+		        android:textSize="14sp"
+	        	android:layout_marginLeft="3dp" />
+	     </LinearLayout>
+         <LinearLayout android:id="@+id/linCoFollowing"
+         	android:layout_width="wrap_content"
+         	android:layout_height="wrap_content"
+         	android:paddingLeft="8dp"
+         	android:paddingRight="8dp"
+         	android:paddingTop="5dp"
+         	android:paddingBottom="5dp"
+         	android:background="@drawable/custom_button_follow"
+         	android:orientation="horizontal"
+         	android:layout_alignParentRight="true"
+        	android:layout_marginRight="10dp" >
+	        <TextView android:id="@+id/txtCountFollowing"
+   	         	android:layout_width="wrap_content"
+	         	android:layout_height="fill_parent"
+		        android:layout_centerVertical="true"
+		        android:textColor="@drawable/custom_button_follow_textview"
+		        android:textSize="14sp" />
+		    <TextView android:id="@+id/txtFollowing"
+   	         	android:layout_width="wrap_content"
+	         	android:layout_height="fill_parent"
+		        android:text="Following"
+		        android:layout_centerVertical="true"
+		        android:textColor="@drawable/custom_button_follow_textview"
+		        android:textSize="14sp"
+	        	android:layout_marginLeft="3dp" />
+	     </LinearLayout>
+	</RelativeLayout>
+    <RelativeLayout android:id="@+id/relProfilee"
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+      	android:background="#1f4d6f"
+      	android:layout_marginBottom="10dp">
+        <TextView android:id="@+id/txtWhatsUp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+		    android:textSize="18sp"
+		    android:textColor="#FFF"
+		    android:gravity="center_vertical"
+		    android:layout_marginLeft="10dp"
+		    android:text="What's Up!" />
+        <View android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:layout_toRightOf="@+id/txtWhatsUp"
+	        android:background="#FFF"
+	        android:layout_marginLeft="40dp"
+	        android:layout_marginTop="40dp"
+       		android:layout_alignParentRight="true" />
+        <TextView android:id="@+id/txtProfName"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_toRightOf="@+id/txtWhatsUp"
+       		android:layout_alignParentRight="true"
+		    android:textSize="18sp"
+		    android:textColor="#FFF"
+		    android:gravity="center_vertical|right"
+	        android:layout_marginLeft="50dp"
+		    android:layout_marginRight="10dp"
+		    android:singleLine="true"
+		    android:textAllCaps="true" />
+   	</RelativeLayout>
+    <!-- END -->
+    
+    <LinearLayout android:id="@+id/linBeforeFollow"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:layout_gravity="center"
+    	android:gravity="center"
+    	android:layout_marginTop="20dp"
+	    android:visibility="gone">
+	    <ImageView android:id="@+id/imgBeforeFollow"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:background="@drawable/before_follow" />
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/linCheckIn"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+	    <!--  PROFILE IMAGE -->
+	    <RelativeLayout android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+		    android:layout_marginLeft="15dp">
+		    <com.miles.referensi.CircleImageView
+			    xmlns:app="http://schemas.android.com/apk/res-auto"
+			    android:id="@+id/profileImage"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+			    app:civ_border_width="1dp"
+			    app:civ_border_color="#1A000000" />
+	    </RelativeLayout>
+    	<!-- ICON LOCATION -->
+    	<RelativeLayout android:layout_width="40dp"
+    		android:layout_height="match_parent"
+    	    android:paddingTop="5dp">
+            <ImageView android:layout_width="40dp"
+    			android:layout_height="20dp"
+    			android:src="@drawable/location" />
+        </RelativeLayout>
+        <!-- BLUE LEFT ARROW -->
+        <ImageView android:layout_width="15dp"
+   			android:layout_height="match_parent"
+   			android:src="@drawable/blue_left_arrow"
+         	android:layout_centerVertical="true"
+         	android:layout_marginLeft="5dp"
+         	android:visibility="gone" />
+        <!-- TEXTVIEW -->
+        <LinearLayout android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical"
+    		android:layout_marginTop="5dp"
+    		android:layout_marginBottom="10dp"
+    		android:layout_marginRight="15dp"
+    		android:layout_marginLeft="0dp">
+	        <TextView android:id="@+id/txtDate"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#323434"
+		        android:textSize="10sp"
+		        android:text="Today, 8:00 PM" />
+	        <TextView android:id="@+id/txtKet"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#323434"
+		        android:textSize="13sp"
+    			android:layout_marginTop="3dp"
+		        android:text="MAMMA ROSY\nKemang Raya no.56, JAKARTA" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/linAttend"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+        <!--  PROFILE IMAGE -->
+	    <RelativeLayout android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+		    android:layout_marginLeft="15dp">
+		    <com.miles.referensi.CircleImageView
+			    xmlns:app="http://schemas.android.com/apk/res-auto"
+			    android:id="@+id/profileImagee"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+			    app:civ_border_width="1dp"
+			    app:civ_border_color="#1A000000" />
+	    </RelativeLayout>
+    	<!-- ICON REVIEW -->
+        <RelativeLayout android:layout_width="40dp"
+    		android:layout_height="match_parent"
+    	    android:paddingTop="5dp">
+            <ImageView android:layout_width="40dp"
+    			android:layout_height="20dp"
+    			android:src="@drawable/review" />
+        </RelativeLayout>
+        <!-- TEXTVIEW -->
+        <LinearLayout android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+    			android:orientation="vertical">
+	            <ImageView android:id="@+id/imgPreview"
+	                android:layout_width="match_parent"
+	    			android:layout_height="wrap_content"
+	    			android:scaleType="centerCrop"
+	    			android:layout_marginRight="15dp"/>
+	            <ImageView android:layout_width="20dp"
+	    			android:layout_height="20dp"
+	    			android:src="@drawable/blue_top_arrow"
+	    			android:layout_marginLeft="15dp"
+	    			android:layout_marginTop="-15dp"
+	    			android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:orientation="vertical"
+	    		android:layout_marginLeft="0dp"
+	    		android:layout_marginRight="15dp"
+	    		android:layout_marginBottom="10dp"
+	    		android:layout_marginTop="5dp">
+		        <TextView android:id="@+id/txtDatee"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="#323434"
+			        android:textSize="10sp"
+			        android:text="Yesterday, 11:00 PM" />
+		        <TextView android:id="@+id/txtKett"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="#323434"
+			        android:textSize="13sp"
+	    			android:layout_marginTop="3dp"
+			        android:text="LEVEL 8 Pacific Place SCBD, JAKARTA" />
+		        <TextView android:id="@+id/txtComment"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="#6a717e"
+			        android:textSize="12sp"
+	    			android:layout_marginTop="3dp"
+			        android:text="It was really good and tasted sweet. After that he made this flame-y cocktail that I was excited to try it, I had a great time!" />
+	        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

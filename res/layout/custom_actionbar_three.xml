@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1f4d6f"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:id="@+id/linParent">
+
+    <RelativeLayout android:id="@+id/linSearch"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/custom_btn_search"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+        <ImageView android:id="@+id/imgSearch"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_search"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:padding="8dp"/>
+        <EditText android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#0000"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="30dp"
+            android:singleLine="true"
+            android:textColor="#595d7c"
+            android:textColorHint="#595d7c"
+            android:textSize="13sp"
+            android:hint="Search" />
+    </RelativeLayout>
+    
+    <LinearLayout android:id="@+id/layoutTabbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:paddingTop="10dip"
+        android:paddingBottom="15dip"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip">
+        <Button android:id="@+id/btnPeople"
+            android:text="People"
+            style="@style/btnStyleTabPeople" />
+        <Button android:id="@+id/btnVenue"
+            android:text="Venue"
+            android:layout_marginLeft="-1dp"
+            style="@style/btnStyleTabVenue" />
+    </LinearLayout>
+</LinearLayout>

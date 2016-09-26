@@ -1,0 +1,119 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    <style name="btnStyleSignIn" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">45dp</item>
+		<item name="android:textSize">15sp</item>
+       	<item name="android:textStyle">bold</item>
+       	<item name="android:textColor">#FFF</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_btn_signin</item>
+       	<item name="android:padding">10dip</item>
+   	</style>
+    
+    <style name="btnStyleRegister" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">45dp</item>
+		<item name="android:textSize">15sp</item>
+       	<item name="android:textStyle">bold</item>
+       	<item name="android:textColor">#FFF</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_btn_register</item>
+   	</style>
+    
+    <style name="btnStyleTabLeft" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">28dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textSize">12sp</item>
+       	<item name="android:textColor">@drawable/custom_tab_left_textview</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_tab_left</item>
+   	</style>
+    
+    <style name="btnStyleTabMiddle" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">28dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textSize">12sp</item>
+       	<item name="android:textColor">@drawable/custom_tab_middle_textview</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_tab_middle</item>
+   	</style>
+    
+    <style name="btnStyleTabRight" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">28dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textSize">12sp</item>
+       	<item name="android:textColor">@drawable/custom_tab_right_textview</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_tab_right</item>
+   	</style>
+    
+    <style name="btnStyleTabFollowing" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">40dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textSize">15sp</item>
+       	<item name="android:textColor">@drawable/custom_button_follow_textview</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_tab_following</item>
+    </style>
+    
+    <style name="btnStyleTabFollowers" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">40dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textSize">15sp</item>
+       	<item name="android:textColor">@drawable/custom_button_follow_textview</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_tab_followers</item>
+   	</style>
+   	
+    <style name="btnStyleTabPeople" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">40dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textSize">14sp</item>
+       	<item name="android:textColor">@drawable/custom_tab_people_textview</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_tab_left</item>
+   	</style>
+   	
+    <style name="btnStyleTabVenue" parent="@android:style/Widget.Button">
+	    <item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">40dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textSize">14sp</item>
+       	<item name="android:textColor">@drawable/custom_tab_people_textview</item>
+       	<item name="android:gravity">center</item>
+       	<item name="android:background">@drawable/custom_tab_right</item>
+   	</style>
+
+</resources>

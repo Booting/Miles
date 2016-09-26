@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="250dp"
+	    android:id="@+id/relImage">
+	    <com.miles.referensi.LoopViewPager
+	        android:id="@+id/pagerItemImages"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+	    <com.viewpagerindicator.CirclePageIndicator
+	        android:id="@+id/indicator"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/pagerItemImages"
+	        android:paddingBottom="10dip"
+	        app:radius="5dip"
+	        app:fillColor="#000"
+	        app:pageColor="#aaa"
+	        app:strokeColor="#00FFFFFF"
+	        app:strokeWidth="0dp" />
+	</RelativeLayout>   
+	<com.miles.referensi.HorizontalListView 
+	    android:id="@+id/HorizontalListView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="150dp"
+	    android:divider="#0000"
+	    android:layout_below="@+id/relImage" />
+</RelativeLayout>
